@@ -1,0 +1,7 @@
+{
+    // Comments are supported, like tsconfig.json
+    "entryPoints": [
+        "cypress/e2e/**"
+    ],
+    "out": "docs"
+}
