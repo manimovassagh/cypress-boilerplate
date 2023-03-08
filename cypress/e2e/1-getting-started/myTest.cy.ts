@@ -18,7 +18,7 @@ describe('Ultimate QA Automation Page', () => {
     })
 
     it('should have the correct header', () => {
-        
+
         cy.visit('https://jsonplaceholder.typicode.com')
         // cy.get('.et_pb_text_inner h1').should('have.text', 'Automation Practice')
         cy.request('GET', 'https://jsonplaceholder.typicode.com/todos',).then(
@@ -57,7 +57,9 @@ describe('Ultimate QA Automation Page', () => {
     it('should have a working contact form', () => {
         cy.visit('https://jsonplaceholder.typicode.com')
         cy.log(example.email)
-     
+        Log.logWIthObjectInput({
+            name: 'mani'
+        })
         cy.request('GET', 'https://jsonplaceholder.typicode.com/todos/1',).then(
             (response) => {
                 // cy.log(response.body)

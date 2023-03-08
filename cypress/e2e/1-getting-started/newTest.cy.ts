@@ -11,7 +11,7 @@ it('test checker', () => {
 
     // cy.request(urlJson).then((posts) => {
     //     logger(posts);
-
+    cy.log(posts)
     // })
     cy.selector("some items to seleect")
     cy.api('https://jsonplaceholder.typicode.com/posts')
