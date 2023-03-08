@@ -8,6 +8,7 @@ it('test checker', () => {
     // cy.intercept('GET', urlJson, {
     //     body: posts
     // }).as('getPosts')
+  
 
     // cy.request(urlJson).then((posts) => {
     //     logger(posts);
