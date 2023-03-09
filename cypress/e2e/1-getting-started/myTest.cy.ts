@@ -8,6 +8,8 @@ const example = require('../../fixtures/profile')
 describe('Ultimate QA Automation Page', () => {
     beforeEach(() => {
         cy.login()
+
+
     })
 
     it('should have the correct title', () => {
@@ -67,6 +69,8 @@ describe('Ultimate QA Automation Page', () => {
                 expect(response.body).not.to.be.undefined
                 expect(response.body).not.to.be.NaN
                 expect(response.body).not.to.throw
+
+
             }
         )
     })
