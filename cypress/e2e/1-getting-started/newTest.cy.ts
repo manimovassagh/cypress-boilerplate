@@ -40,6 +40,9 @@ it('test checker', () => {
     cy.log('**----------- Xpyth    **')
     cy.xpath("(//a[normalize-space()='Blog'])[1]").should("be.visible")
     cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
+    cy.log('**xpath without slash**')
+    cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
+    cy.xpath("(//button[normalize-space()='Run script'])[1]").should("be.visible").and("have.class", "bg-green-500")
     // cy.request(urlJson).then((posts) => {
     //     logger(posts);
     cy.log(posts)
