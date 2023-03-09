@@ -1,5 +1,7 @@
 import 'cypress-plugin-api'
 require('./commands')
+require('@cypress/xpath');
+
 
 
 // ***********************************************************

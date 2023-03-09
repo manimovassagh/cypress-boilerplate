@@ -8,7 +8,6 @@ const example = require('../../fixtures/profile')
 describe('Ultimate QA Automation Page', () => {
     beforeEach(() => {
         cy.login()
-        cy.step('start a new line in cypress')
     })
 
     it('should have the correct title', () => {
@@ -57,9 +56,7 @@ describe('Ultimate QA Automation Page', () => {
     it('should have a working contact form', () => {
         cy.visit('https://jsonplaceholder.typicode.com')
         cy.log(example.email)
-        Log.logWIthObjectInput({
-            name: 'mani'
-        })
+
         cy.request('GET', 'https://jsonplaceholder.typicode.com/todos/1',).then(
             (response) => {
                 // cy.log(response.body)

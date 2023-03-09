@@ -3,6 +3,7 @@ declare namespace Cypress {
     interface Chainable<Subject> {
         generateToken(secret: any): Cypress.Chainable<void>;
         some(): Cypress.Chainable<void>;
+        xpath(xpath: string): Cypress.Chainable<void>;
     }
 }
 
