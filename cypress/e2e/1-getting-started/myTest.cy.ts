@@ -1,6 +1,4 @@
 
-import { addressLogger, VisitMyOwn } from "../actions/AddressLogger"
-import { selector } from "../utility/selector"
 const example = require('../../fixtures/profile')
 
 
@@ -13,7 +11,6 @@ describe('Ultimate QA Automation Page', () => {
     })
 
     it.only('should have the correct title', () => {
-        addressLogger('Lindengasse 7 ')
         expect(2 + 2).to.be.equal(4)
 
     })
@@ -58,6 +55,9 @@ describe('Ultimate QA Automation Page', () => {
     it('should have a working contact form', () => {
         cy.visit('https://jsonplaceholder.typicode.com')
         cy.log(example.email)
+
+       
+        
 
         cy.request('GET', 'https://jsonplaceholder.typicode.com/todos/1',).then(
             (response) => {

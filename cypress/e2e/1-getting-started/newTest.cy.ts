@@ -5,6 +5,7 @@ import { logger } from '../utility/Stringify';
 
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
+    
     // cy.intercept('GET', urlJson, {
     //     body: posts
     // }).as('getPosts')
