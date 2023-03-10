@@ -1,9 +1,9 @@
 
 import { addressLogger, VisitMyOwn } from "../actions/AddressLogger"
 import { selector } from "../utility/selector"
-
-
 const example = require('../../fixtures/profile')
+
+
 
 describe('Ultimate QA Automation Page', () => {
     beforeEach(() => {
@@ -12,7 +12,7 @@ describe('Ultimate QA Automation Page', () => {
 
     })
 
-    it('should have the correct title', () => {
+    it.only('should have the correct title', () => {
         addressLogger('Lindengasse 7 ')
         expect(2 + 2).to.be.equal(4)
 
@@ -69,8 +69,6 @@ describe('Ultimate QA Automation Page', () => {
                 expect(response.body).not.to.be.undefined
                 expect(response.body).not.to.be.NaN
                 expect(response.body).not.to.throw
-
-
             }
         )
     })
