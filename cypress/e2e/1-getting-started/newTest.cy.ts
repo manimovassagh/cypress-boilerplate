@@ -59,7 +59,7 @@ it('test checker', () => {
         console.log(el);
         cy.log('******************')
         cy.log(el[0].baseURI);
-
+       
 
     })
     cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")

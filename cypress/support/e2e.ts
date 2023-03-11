@@ -3,6 +3,7 @@ require('./commands')
 require('@cypress/xpath');
 import 'cypress-plugin-steps'
 require('cy-spok')
+import 'cypress-mochawesome-reporter/register';
 
 
 // ***********************************************************
