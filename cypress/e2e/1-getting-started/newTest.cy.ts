@@ -5,7 +5,7 @@ import { logger } from '../utility/Stringify';
 
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
-    
+
     const obg = {
         userId: 1,
         id: 1,
@@ -30,12 +30,12 @@ it('test checker', () => {
         const el = $el
         const origin = el[0].origin
         cy.log('******************')
-        
+
         cy.log('** The origin is **', origin)
         console.log(el);
         cy.log('******************')
         cy.log(el[0].baseURI);
-       
+
 
     })
     cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
@@ -45,7 +45,7 @@ it('test checker', () => {
     cy.api(urlJson).then((res) => {
         cy.log("Response is \n", res.body)
         res.body.forEach(element => {
-            if(element.id===36){
+            if (element.id === 36) {
                 expect(element.title).to.contain("fuga nam accusamus voluptas reiciendis itaque")
             }
         });
