@@ -6,30 +6,6 @@ import { logger } from '../utility/Stringify';
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
     
-    // cy.intercept('GET', urlJson, {
-    //     body: posts
-    // }).as('getPosts')
-    // cy.log(spok)
-    //     const object = {}
-    //     cy.wrap(object, { timeout: 2000 }).should(
-    //         spok({
-    //             $topic: 'spok-example', // optional
-    //             one: spok.ge(1),
-    //             two: 2,
-    //             three: spok.range(2, 6),
-    //             four: spok.lt(5),
-    //             helloWorld: spok.startsWith('hello'),
-    //             anyNum: spok.type('number'),
-    //             anotherNum: spok.number,
-    //             anArray: spok.array,
-    //             anObject: spok.ne(undefined),
-    //             // test a string using regular expression
-    //             id: spok.test(/^abc\d{3}$/),
-    //             // array with 3 elements
-    //             list: spok.arrayElements(3),
-    //         }),
-    //     )
-
     const obg = {
         userId: 1,
         id: 1,
@@ -54,7 +30,7 @@ it('test checker', () => {
         const el = $el
         const origin = el[0].origin
         cy.log('******************')
-        //@ts-nocheck
+        
         cy.log('** The origin is **', origin)
         console.log(el);
         cy.log('******************')
@@ -75,8 +51,6 @@ it('test checker', () => {
         });
     })
     cy.selector("some items to seleect")
-    //cy.api('https://jsonplaceholder.typicode.com/posts')
-    // cy.get('.et_pb_widget_area [type="search"]').should('be.visible')
-    // cy.url().should('contain', 'jsonplaceholder')
+
 });
 

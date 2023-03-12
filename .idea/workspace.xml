@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="384db869-71c1-452b-930c-b23463292278" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/newTest.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/newTest.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/e2e.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/e2e.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/support/commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/commands.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
+    "last_opened_file_path": "C:/Users/mani.movassaghghazan/Desktop/ProjectRepository/cypress-boilerplate",
     "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "vue.rearranger.settings.migration": "true"
   }
