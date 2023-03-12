@@ -1,11 +1,25 @@
-const artc= require('../../fixtures/article')
+import { expect } from "chai";
+
+const article= require('../../fixtures/article')
 it('Test intercept the jsonplaceholder website', () => {
 
     
     cy.visit('/')
-    cy.intercept('GET',"https://api.realworld.io/api/articles?limit=10&offset=0",{
-        body:artc
-    }).as('home')
+    cy.intercept('GET'
+    ,"https://api.realworld.io/api/articles?limit=10&offset=0",
+    {   
+        body:article
+    }
+    ,
+    
+    ).as('home')
+
+    cy.wait('@home').its('response.body').then((res)=>{
+       // expect((res.articles[0]).to.be.include("slug")
+        cy.log(res.articles[0])
+  
+    })
+
     //cy.get('div[class="col-md-3"] a:nth-child(1)').click()
 
 
