@@ -1,14 +1,15 @@
 
 const example = require('../../fixtures/profile')
 
-
+/**
+ * @author Mani Movassagh
+ * @description Regarding to test case No  
+ * @summary PS-TF-55165
+ */
 
 describe('Ultimate QA Automation Page', () => {
-    beforeEach(() => {
-        cy.login()
+    beforeEach(() => cy.login())
 
-
-    })
 
     it.only('should have the correct title', () => {
         expect(2 + 2).to.be.equal(4)
@@ -48,11 +49,8 @@ describe('Ultimate QA Automation Page', () => {
     })
 
 
-    /**
-     * @TestCase 
-     * 
-     */
-    it('should have a working contact form', () => {
+
+    it('should  have a working contact form', () => {
         cy.visit('https://jsonplaceholder.typicode.com')
         cy.log(example.email)
 
