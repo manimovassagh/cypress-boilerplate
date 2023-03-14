@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384db869-71c1-452b-930c-b23463292278" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/commands.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/jquery.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/jquery.cy.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="i284n20h" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,6 +36,10 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "C:/Users/mani.movassaghghazan/Desktop/ProjectRepository/cypress-boilerplate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,8 +53,13 @@
       <option name="presentableId" value="Default" />
       <updated>1678405498598</updated>
       <workItem from="1678405501817" duration="21000" />
+      <workItem from="1678811096387" duration="378000" />
+      <workItem from="1678811485222" duration="582000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
