@@ -11,6 +11,7 @@ it('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, function (
         .should(spok({
             firstName: 'Gloria',
             Zip: spok.test(/^\d{5}$/),
+            Birthday: Cypress._.isString,
         }))
     // cy.contains('table tbody tr', 'Dave')
     //     .find('td')
