@@ -2,6 +2,10 @@
 
 context('Actions', () => {
   beforeEach(() => {
+    cy.get('')
+
+    cy.get('a')
+    cy.step('Just an step ')
     cy.visit('https://example.cypress.io/commands/actions')
   })
 

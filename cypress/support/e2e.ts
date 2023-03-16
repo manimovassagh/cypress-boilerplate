@@ -4,8 +4,9 @@ require('@cypress/xpath');
 import 'cypress-plugin-steps'
 require('cy-spok')
 import 'cypress-mochawesome-reporter/register';
-
-
+import "cypress-real-events";
+import 'cypress-map'
+import 'cy-spok'
 // ***********************************************************
 // This example support/e2e.ts is processed and
 // loaded automatically before your test files.

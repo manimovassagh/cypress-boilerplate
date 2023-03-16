@@ -1,7 +1,10 @@
 it('test jquery', () => {
     cy.visit('/')
-    cy.get('[data-test="username"]').type('standard_user')
+    cy.get('[data-test="username"]').realHover()
+
     cy.get('[data-test="password"]').type('secret_sauce')
+    cy.get('[data-test="password"]')
+    Cypress._.isArray()
     cy.get('[data-test="login-button"]').click()
     cy.get('button').should('have.length', 8).filter((fn, el) => {
         return (
