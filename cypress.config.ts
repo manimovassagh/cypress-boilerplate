@@ -4,7 +4,7 @@ const { verifyDownloadTasks } = require('cy-verify-downloads');
 export default defineConfig({
 
   e2e: {
-    baseUrl: 'https://ainize.ai/saucelabs/the-internet',
+    baseUrl: 'http://localhost:5500/',
     //chromeWebSecurity: false,
     experimentalStudio: true,
     env: {

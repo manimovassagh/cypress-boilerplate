@@ -26,7 +26,6 @@
     "@cypress/xpath": "^2.0.3",
     "cy-spok": "^1.6.1",
     "cy-verify-downloads": "^0.1.13",
-    "cypress-if": "^1.10.4",
     "cypress-map": "^1.14.0",
     "cypress-mochawesome-reporter": "^3.3.0",
     "mochawesome": "^7.1.3",
