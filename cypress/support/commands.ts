@@ -4,7 +4,7 @@ declare namespace Cypress {
         generateToken(secret: any): Cypress.Chainable<void>;
         some(): Cypress.Chainable<void>;
         login(): Cypress.Chainable<void>;
-        selector(param:string): Cypress.Chainable<void>;
+        selector(param: string): Cypress.Chainable<void>;
         xpath(xpath: string): Cypress.Chainable<void>;
     }
 }

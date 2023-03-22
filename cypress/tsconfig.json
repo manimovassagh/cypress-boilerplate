@@ -2,7 +2,7 @@
   "compilerOptions": {
     "noImplicitAny": false,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames":true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "target": "ES5",
     "lib": [
@@ -12,7 +12,8 @@
     "types": [
       "cypress",
       "node",
-      "cypress-plugin-steps"
+      "cypress-plugin-steps",
+      "cy-verify-downloads"
     ]
   },
   "include": [
