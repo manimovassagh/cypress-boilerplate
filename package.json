@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
+    "dev": "cypress open",
     "cy:run": "cypress run"
   },
   "keywords": [],

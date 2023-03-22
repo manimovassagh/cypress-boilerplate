@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384db869-71c1-452b-930c-b23463292278" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/jquery.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/jquery.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/actions.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/actions.cy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/e2e.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/e2e.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/table.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/table.cy.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,7 @@
       <workItem from="1678811485222" duration="582000" />
       <workItem from="1678913799697" duration="117000" />
       <workItem from="1678913941842" duration="17000" />
+      <workItem from="1679433985569" duration="36000" />
     </task>
     <servers />
   </component>
