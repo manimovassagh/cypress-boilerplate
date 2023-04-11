@@ -17,7 +17,7 @@ describe('Ultimate QA Automation Page', () => {
         /* ==== Generated with Cypress Studio ==== */
         cy.visit('http://www.google.com');
         cy.get('#L2AGLb > .QS5gu').click();
-        cy.get('.gLFyf').clear('m');
+      //  cy.get('.gLFyf').clear('m');
         cy.get('.gLFyf').type('mani{enter}');
         cy.get('.aajZCb > .lJ9FBc > center > .gNO89b').click();
         cy.get('[data-hveid="CCEQAA"] > .g > :nth-child(1) > [jscontroller="SC7lYd"] > .GLI8Bc > .jGGQ5e > .yuRUbf > a > .LC20lb').click();

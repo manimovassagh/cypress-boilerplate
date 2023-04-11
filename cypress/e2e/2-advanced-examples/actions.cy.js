@@ -7,6 +7,7 @@ context('Actions', () => {
     cy.get('a')
     cy.step('Just an step ')
     cy.visit('https://example.cypress.io/commands/actions')
+
   })
 
   // https://on.cypress.io/interacting-with-elements

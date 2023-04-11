@@ -11,5 +11,4 @@ it('check request', () => {
         })
     cy.log('<h1>check some markdown</h1>')
 
-
 })
