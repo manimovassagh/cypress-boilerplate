@@ -3,6 +3,7 @@ it('check request', () => {
     cy.request('GET', 'https://jsonplaceholder.typicode.com/todos/1')
         .its('body')
         .should('have.a.property', 'completed')
+        
 
     cy.request('GET', 'https://jsonplaceholder.typicode.com/todos')
         .its("body").each($el => {
