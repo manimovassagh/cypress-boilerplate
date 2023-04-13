@@ -10,5 +10,6 @@ it('check request', () => {
             assert.equal([1, 2, 3].indexOf(4), -1);
         })
     cy.log('<h1>check some markdown</h1>')
+    
 
 })

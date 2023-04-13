@@ -16,6 +16,7 @@ context('Aliasing', () => {
       .first().find('td').first()
       .find('button').as('firstBtn')
 
+
     // when we reference the alias, we place an
     // @ in front of its name
     cy.get('@firstBtn').click()
