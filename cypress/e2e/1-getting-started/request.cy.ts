@@ -1,10 +1,10 @@
 it('check request', () => {
-// test
+
     cy.request('GET', 'https://jsonplaceholder.typicode.com/todos/1')
         .its('body')
         .should('have.a.property', 'completed')
 
-    
+
     cy.request('GET', 'https://jsonplaceholder.typicode.com/todos')
         .its("body").each($el => {
             expect($el).to.have.property('completed').and.not.to.be.undefined.and.not.to.be.null
