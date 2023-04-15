@@ -5,6 +5,7 @@ it('test jquery', () => {
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="password"]')
     Cypress._.isArray()
+    
     cy.get('[data-test="login-button"]').click()
     cy.get('button').should('have.length', 8).filter((fn, el) => {
         return (
@@ -27,11 +28,7 @@ it('test jquery', () => {
     // cy.get('*[id^="add-to-cart"]')
     //     .then(($button) => {
 
-    //         expect($button.last()).to.contain('Add')
-    //         expect($button.first()).to.contain('Add')
-    //         expect($button.first())
-
-    //     })
+    // cy.get('*[id^="add-to-cart"]')
 
     // cy.get('*[id^="add-to-cart"]').should(($buttons) => {
     //     expect($buttons.eq(0)).not.to.be.disabled

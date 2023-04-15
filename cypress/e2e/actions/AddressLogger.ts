@@ -7,7 +7,9 @@ export function addressLogger(address: string) {
 export function VisitMyOwn() {
 
 
-  
+
+   
+     cy.get("test")  
   cy.visit(FIRST)
   cy.step("this is my step")
 

@@ -1,6 +1,6 @@
+import { urlJson } from "../constants/routes/URL";
+
 const posts = require('../../fixtures/posts')
-import { urlJson } from '../constants/routes/URL'
-import { logger } from '../utility/Stringify';
 
 
 it('test checker', () => {
@@ -12,16 +12,12 @@ it('test checker', () => {
         title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
         body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     }
-
     const obg2 = {
         userId: 13,
         id: 1,
         title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
         body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     }
-
-
-
 
     cy.step('Check some new feauture')
     cy.log('**----------- Xpyth    **')
@@ -51,6 +47,7 @@ it('test checker', () => {
         });
     })
     cy.selector("some items to seleect")
+//log cypress "mani"
 
 });
 

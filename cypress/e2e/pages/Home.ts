@@ -6,7 +6,9 @@
 export class Home {
 
     visitGoogle() {
-        cy.visit('http://www.google.com')
+
+cy.get("check that ")
+    cy.visit('http://www.google.com')
     }
 
 
