@@ -32,7 +32,7 @@ it('test checker', () => {
         cy.log('******************')
         cy.log(el[0].baseURI);
 
-
+//check
     })
     cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
     cy.log('**xpath without slash**')
