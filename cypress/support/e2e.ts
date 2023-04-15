@@ -8,7 +8,7 @@ import "cypress-real-events";
 import 'cypress-map'
 import 'cy-spok'
 require('cy-verify-downloads').addCustomCommand();
-
+require("@cypress/xpath")
 // ***********************************************************
 // This example support/e2e.ts is processed and
 // loaded automatically before your test files.
