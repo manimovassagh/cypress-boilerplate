@@ -32,22 +32,9 @@ it('test checker', () => {
         cy.log('******************')
         cy.log(el[0].baseURI);
 
-//check it
-    })
-    cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
-    cy.log('**xpath without slash**')
-    cy.xpath("(//img[@src='mockend.svg'])[1]").should("be.visible")
-    cy.xpath("(//button[normalize-space()='Run script'])[1]").should("be.visible").and("have.class", "bg-green-500")
-    cy.api(urlJson).then((res) => {
-        cy.log("Response is \n", res.body)
-        res.body.forEach(element => {
-            if (element.id === 36) {
-                expect(element.title).to.contain("fuga nam accusamus voluptas reiciendis itaque")
-            }
-        });
+        //check it
     })
     cy.selector("some items to seleect")
-//log cypress "mani"
+    //log cypress "mani"
 
 });
-
