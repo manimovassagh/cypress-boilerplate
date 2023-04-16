@@ -1,7 +1,7 @@
 import { urlJson } from "../constants/routes/URL";
 
 const posts = require('../../fixtures/posts')
-//ttttt
+//tttt
 
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
