@@ -16,7 +16,8 @@ describe("Ultimate QA Automation Page", () => {
     cy.visit("http://www.google.com");
     cy.get("#L2AGLb > .QS5gu").click();
     //  cy.get('.gLFyf').clear('m');
-    cy.get(".gLFyf").type("mani{enter}");
+    // cy.get(".gLFyf").type("mani{enter}");
+
 
     cy.get(".aajZCb > .lJ9FBc > center > .gNO89b").click();
     cy.get(
@@ -30,8 +31,8 @@ describe("Ultimate QA Automation Page", () => {
     // cy.get('.et_pb_text_inner h1').should('have.text', 'Automation Practice')
     cy.request("GET", "https://jsonplaceholder.typicode.com/todos").then(
       (response) => {
-        cy.log(response.body);
-
+        cy.log(response.body);  
+      
         expect(response.body).to.be.not.empty;
         response.body.forEach((element) => {
           expect(element).to.have.property("title");
