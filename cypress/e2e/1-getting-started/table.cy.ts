@@ -30,6 +30,7 @@ it('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, function (
 })
 
 it.only('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, function () {
+    cy.step("use spoke")
     cy.visit('/')
     cy.get('table tbody tr')
         .find('td')
@@ -37,7 +38,7 @@ it.only('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, funct
         .print()
         .partial(Cypress._.zipObject, props)
         .should(spok({
-            firstName: 'Gloria',    
+            firstName: 'Gloria',
             Zip: spok.test(/^\d{5}$/),
             Birthday: Cypress._.isString,
         }))
