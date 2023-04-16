@@ -6,7 +6,7 @@ const posts = require('../../fixtures/posts')
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
 
-
+//check the time frame to be able to go for it 
     const obg = {
         userId: 1,
         id: 1,
