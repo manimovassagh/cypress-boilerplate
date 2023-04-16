@@ -6,6 +6,7 @@ const posts = require('../../fixtures/posts')
 it('test checker', () => {
     cy.visit('https://jsonplaceholder.typicode.com')
 
+
     const obg = {
         userId: 1,
         id: 1,
