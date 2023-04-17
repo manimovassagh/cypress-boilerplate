@@ -28,7 +28,7 @@ it('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, function (
     //         }),
     //     )
 })
-
+//test it
 it.only('confirms the a row', { baseUrl: 'https://tablepress.org/demo/' }, function () {
     cy.step("use spoke")
     cy.visit('/')
