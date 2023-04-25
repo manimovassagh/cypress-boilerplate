@@ -5,6 +5,7 @@ const example = require("../../fixtures/profile");
  * @author Mani Movassagh
  * @description Regarding to test case No
  * @summary PS-TF-55165
+ * @description Just describe the test here
  */
 
 describe("Ultimate QA Automation Page", () => {
