@@ -1,6 +1,7 @@
 const example = require("../../fixtures/profile");
 
 /**
+ * check
  * @author Mani Movassagh
  * @description Regarding to test case No
  * @summary PS-TF-55165
