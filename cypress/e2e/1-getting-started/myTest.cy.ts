@@ -42,6 +42,7 @@ describe("Ultimate QA Automation Page", () => {
           expect(element).to.be.not.empty;
           expect(element).to.be.not.undefined;
           expect(element).to.be.not.null;
+          expect(element).to.be.not.null;
         });
         expect(response.body).not.to.have.property("auth");
         expect(response.body).not.to.be.empty;
