@@ -30,7 +30,7 @@ describe("Ultimate QA Automation Page", () => {
   });
 
   it("should have the correct header", () => {
-    //check the header of page 
+    //check the header of page test
     cy.visit("https://jsonplaceholder.typicode.com");
     // cy.get('.et_pb_text_inner h1').should('have.text', 'Automation Practice')
     cy.request("GET", "https://jsonplaceholder.typicode.com/todos").then(
