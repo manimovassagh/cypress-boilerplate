@@ -20,7 +20,8 @@
     "cypress": "^12.7.0",
     "cypress-plugin-api": "^2.10.3",
     "cypress-plugin-steps": "^1.1.0",
-    "cypress-real-events": "^1.7.6"
+    "cypress-real-events": "^1.7.6",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
