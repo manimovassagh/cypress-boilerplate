@@ -2,6 +2,14 @@ import { defineConfig } from 'cypress'
 const { verifyDownloadTasks } = require('cy-verify-downloads');
 const mysql = require('mysql');
 
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "mmmmmm",
+  database: 'cypress'
+
+});
+
 export default defineConfig({
 
   e2e: {
@@ -17,8 +25,12 @@ export default defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
       on('task', verifyDownloadTasks);
       on('task', {
-        resetDatabase() {
+        async resetDatabase() {
+
           // Do Database reset
+          console.log('Seed database is done');
+
+          return null;
         }
       });
 
