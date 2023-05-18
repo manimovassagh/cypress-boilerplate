@@ -26,7 +26,6 @@ export default defineConfig({
       on('task', verifyDownloadTasks);
       on('task', {
         async resetDatabase() {
-
           // Do Database reset
           console.log('Seed database is done');
           console.log('Seed database is done');

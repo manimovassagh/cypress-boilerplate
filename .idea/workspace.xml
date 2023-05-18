@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="384db869-71c1-452b-930c-b23463292278" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/local.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/myTest.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/1-getting-started/request.cy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/request.cy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/actions.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/actions.cy.js" afterDir="false" />
-    </list>
+    <list default="true" id="384db869-71c1-452b-930c-b23463292278" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +43,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/mani/Documents/Projects/cypress-boilerplate/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -78,6 +72,7 @@
       <workItem from="1680558243336" duration="175000" />
       <workItem from="1680558428921" duration="1257000" />
       <workItem from="1680887234170" duration="100000" />
+      <workItem from="1684429068719" duration="182000" />
     </task>
     <servers />
   </component>
