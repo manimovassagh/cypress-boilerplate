@@ -29,6 +29,7 @@ export default defineConfig({
 
           // Do Database reset
           console.log('Seed database is done');
+          console.log('Seed database is done');
 
           return null;
         }
