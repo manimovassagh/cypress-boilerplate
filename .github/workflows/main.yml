@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
-          command: npm run ui-regression
+          command: npm run test
       - name: Uploading artifact
         uses: actions/upload-artifact@v2
         if: always()
