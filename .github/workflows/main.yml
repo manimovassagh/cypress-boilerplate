@@ -1,21 +1,32 @@
 name: Run Cypress Tests
 
 on:
-    push:
-      branches:
-        - main
-    pull_request:
-    schedule:
-      - cron: '0 21 * * *' # Runs nightly at 10 PM Berlin time (9 PM UTC)
-  
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: '0 21 * * *' # Runs nightly at 10 PM Berlin time (9 PM UTC)
 
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Build and run Cypress tests in Docker
-      run: npm run cypress:docker:run
+      # Install Node.js and npm
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # Install dependencies from package.json
+      - name: Install Dependencies
+        run: npm ci
+
+      # Run Cypress tests in Docker container
+      - name: Run Cypress Tests in Docker
+        run: |
+          docker run -v $PWD:/e2e -w /e2e cypress/included:latest run
