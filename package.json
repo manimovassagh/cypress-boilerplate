@@ -6,7 +6,10 @@
   "scripts": {
     "cypress:open": "cypress open",
     "dev": "cypress open",
-    "cy:run": "cypress run"
+    "build": "rollup -c",
+    "start": "http-server",
+    "test": "cypress run",
+     "cypress:run": "cypress run"
   },
   "keywords": [],
   "author": "Mani Movassagh",
