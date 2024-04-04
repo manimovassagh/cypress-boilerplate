@@ -1,32 +1,23 @@
-name: Run Cypress Tests
+name: Cypress Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-  schedule:
-    - cron: '0 21 * * *' # Runs nightly at 10 PM Berlin time (9 PM UTC)
+on: [push]
 
 jobs:
-  cypress-tests:
+  cypress-run:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-
-      # Install Node.js and npm
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4 # use the explicit version number
         with:
-          node-version: '14'
-
-      # Install dependencies from package.json
-      - name: Install Dependencies
-        run: npm ci
-
-      # Run Cypress tests in Docker container
-      - name: Run Cypress Tests in Docker
-        run: |
-          docker run -v $PWD:/e2e -w /e2e cypress/included:latest run
+          command: npm run ui-regression
+      - name: Uploading artifact
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-execution-report
+          path: cypress/reports/html
+          retention-days: 30
