@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+     "build": "rollup -c",
     "cypress:open": "cypress open",
     "dev": "cypress open",
-    "build": "rollup -c",
     "start": "http-server",
     "test": "cypress run",
      "cypress:run": "cypress run"
