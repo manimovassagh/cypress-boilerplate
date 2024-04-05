@@ -4,20 +4,24 @@ on:
   push:
     branches:
       - main
-  
   workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * *' # Runs nightly at 10 PM Berlin time (9 PM UTC)
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
           command: npm run test
+
       - name: Uploading artifact
         uses: actions/upload-artifact@v2
         if: always()
@@ -25,11 +29,13 @@ jobs:
           name: cypress-execution-report
           path: cypress/reports/html
           retention-days: 30
+
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+
       - uses: actions/upload-artifact@v1
         if: always()
         with:
