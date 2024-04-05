@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '0 21 * * *' # Runs nightly at 10 PM Berlin time (9 PM UTC)
+    - cron: '35 18 * * *' # Runs at 18:35 (6:35 PM) Berlin time
 
 jobs:
   cypress-run:
