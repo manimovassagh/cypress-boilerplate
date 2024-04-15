@@ -19,6 +19,15 @@ jobs:
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
           command: npm run test
+
+      - name: Checkout number 2 task
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4 # use the explicit version number
+        with:
+          command: npm run test
       - name: Uploading artifact
         uses: actions/upload-artifact@v2
         if: always()
