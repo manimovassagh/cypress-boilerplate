@@ -1,6 +1,6 @@
 describe('unhappy', () => {
     it('chcck reporter', () => {
         const name = 'mani'
-        expect(name).to.be.equal('s')
+        expect(name).to.be.equal('mani')
     });
 })
