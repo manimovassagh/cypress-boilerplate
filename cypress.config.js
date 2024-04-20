@@ -1,4 +1,6 @@
 const { defineConfig } = require("cypress");
+
+cy.getCookie()
 //test
 module.exports = defineConfig({
   e2e: {
