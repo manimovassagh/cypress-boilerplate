@@ -24,12 +24,13 @@ jobs:
         if: 
           always()
         with:
-          name: cypress-execution-report
+          name: cypress-execution-report 66
           path: cypress/reports/html
           retention-days: 30
 
             
       - name: Checkout number 2 task
+        id: step1
         uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
@@ -41,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cypress-execution-report
+          name: cypress-execution-report 55
           path: cypress/reports/html
           retention-days: 30
 
@@ -56,28 +57,30 @@ jobs:
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
           command: npm run test
-      - name: Uploading artifact
+      - name: Uploading artifact 2
         uses: actions/upload-artifact@v4
         if: 
           always()
         with:
-          name: cypress-execution-report
+          name: cypress-execution-report 77
           path: cypress/reports/html
           retention-days: 30
 
             
       - name: Checkout number 2 task
+
         uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
+       
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
           command: npm run test
-      - name: Uploading artifact
+      - name: Uploading artifact 3
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cypress-execution-report
+          name: cypress-execution-report 99
           path: cypress/reports/html
           retention-days: 30
