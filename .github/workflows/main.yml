@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  
   workflow_dispatch:
 
 jobs:
@@ -13,32 +12,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4 # use the explicit version number
+      - name: Cypress run 1
+        uses: cypress-io/github-action@v4
         with:
           command: npm run test
-      - name: Uploading artifact
+
+      - name: Uploading artifact 1
         uses: actions/upload-artifact@v4
-        if: 
-          always()
+        if: always()
         with:
           name: cypress-execution-report 66
           path: cypress/reports/html
           retention-days: 30
 
-            
       - name: Checkout number 2 task
-        id: step1
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4 # use the explicit version number
+
+      - name: Cypress run 2
+        uses: cypress-io/github-action@v4
         with:
           command: npm run test
-      - name: Uploading artifact
+
+      - name: Uploading artifact 2
         uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -46,38 +44,31 @@ jobs:
           path: cypress/reports/html
           retention-days: 30
 
-  cypress-run2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
+      - name: Checkout number 3 task
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4 # use the explicit version number
+
+      - name: Cypress run 3
+        uses: cypress-io/github-action@v4
         with:
           command: npm run test
-      - name: Uploading artifact 2
+
+      - name: Uploading artifact 3
         uses: actions/upload-artifact@v4
-        if: 
-          always()
+        if: always()
         with:
           name: cypress-execution-report 77
           path: cypress/reports/html
           retention-days: 30
 
-            
-      - name: Checkout number 2 task
-
+      - name: Checkout number 4 task
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-       
-        uses: cypress-io/github-action@v4 # use the explicit version number
+
+      - name: Cypress run 4
+        uses: cypress-io/github-action@v4
         with:
           command: npm run test
-      - name: Uploading artifact 3
+
+      - name: Uploading artifact 4
         uses: actions/upload-artifact@v4
         if: always()
         with:
