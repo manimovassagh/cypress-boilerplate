@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -20,7 +20,7 @@ jobs:
         with:
           command: npm run test
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: 
           always()
         with:
@@ -30,7 +30,7 @@ jobs:
 
             
       - name: Checkout number 2 task
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -38,7 +38,7 @@ jobs:
         with:
           command: npm run test
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cypress-execution-report
@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -57,7 +57,7 @@ jobs:
         with:
           command: npm run test
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: 
           always()
         with:
@@ -67,7 +67,7 @@ jobs:
 
             
       - name: Checkout number 2 task
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -75,7 +75,7 @@ jobs:
         with:
           command: npm run test
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cypress-execution-report
