@@ -18,7 +18,7 @@ describe("unhappy", () => {
 
   it("chcck reporter with non-empty name", () => {
     const name = names.nameOne;
-    expect(name).to.not.be.empty;
+    expect(name).to.not.be.empty;	
   });
   // Testing string equality with case-insensitivity
 
