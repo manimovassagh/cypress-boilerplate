@@ -5,7 +5,6 @@ describe("test", () => {
     cy.log(Cypress.env("api_url"));
     cy.log(Cypress.env("api_url"));
     cy.log(Cypress.env("api_url"));
-    cy.log(Cypress.env("api_url"));
   });
 //check
   // The test checks if the value of the variable 'name' is not equal to 'john'
