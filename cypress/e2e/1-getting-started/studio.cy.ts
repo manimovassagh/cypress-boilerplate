@@ -9,7 +9,6 @@ describe("test", () => {
 
   it("chcck reporter with string name", () => {
     const name = "mani";
-    const name = "mani";
     expect(name).to.be.a("string");
   });
   it("chcck reporter with different name", () => {
