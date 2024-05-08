@@ -13,7 +13,6 @@ describe("test", () => {
     expect(name).to.be.a("string");
     expect(name).to.be.a("string");
     expect(name).to.be.a("string");
-    expect(name).to.be.a("string");
   });
   it("chcck reporter with different name", () => {
     const name = "john";
