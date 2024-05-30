@@ -12,43 +12,50 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-    # Checkout the main repository containing the workflow
     - name: Checkout main repository
       uses: actions/checkout@v2
 
-    # Checkout the Spring Boot repository
     - name: Checkout Spring Boot repository
       uses: actions/checkout@v2
       with:
         repository: your-org/spring-boot-repo
         path: spring-boot-repo
 
-    # Checkout the Angular repository
     - name: Checkout Angular repository
       uses: actions/checkout@v2
       with:
         repository: your-org/angular-repo
         path: angular-repo
 
-    # Checkout the Cypress test repository
     - name: Checkout Cypress repository
       uses: actions/checkout@v2
       with:
         repository: your-org/cypress-repo
         path: cypress-repo
 
+  start-postgres:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start PostgreSQL
+      run: |
+        echo "Starting PostgreSQL..."
+        docker run --name postgres -e POSTGRES_DB=testdb -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:13
+        echo "Waiting for PostgreSQL to be ready..."
+        until docker exec postgres pg_isready -U user; do
+          echo "Waiting for PostgreSQL..."
+          sleep 5
+        done
+
   build-spring-boot:
     runs-on: ubuntu-latest
-    needs: checkout
+    needs: [checkout, start-postgres]
     steps:
-    # Set up JDK 17 for building the Spring Boot application
     - name: Set up JDK 17
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
         java-version: '17'
 
-    # Build the Spring Boot application
     - name: Build Spring Boot application
       run: ./mvnw clean install
       working-directory: ./spring-boot-repo
@@ -56,22 +63,7 @@ jobs:
   start-spring-boot:
     runs-on: ubuntu-latest
     needs: build-spring-boot
-    services:
-      postgres:
-        image: postgres:13
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_DB: testdb
-          POSTGRES_USER: user
-          POSTGRES_PASSWORD: password
-        options: >-
-          --health-cmd "pg_isready -U $${POSTGRES_USER}" 
-          --health-interval 10s 
-          --health-timeout 5s 
-          --health-retries 5
     steps:
-    # Start the Spring Boot application
     - name: Start Spring Boot application
       run: ./mvnw spring-boot:run &
       working-directory: ./spring-boot-repo
@@ -80,7 +72,6 @@ jobs:
         SPRING_DATASOURCE_USERNAME: user
         SPRING_DATASOURCE_PASSWORD: password
 
-    # Wait for the Spring Boot application to start
     - name: Wait for Spring Boot application to start
       run: |
         echo "Waiting for Spring Boot to start..."
@@ -93,18 +84,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout
     steps:
-    # Set up Node.js 18.x for building the Angular application
-    - name: Set up Node.js
+    - name: Set up Node.js 18.x for building the Angular application
       uses: actions/setup-node@v2
       with:
         node-version: '18'
 
-    # Install dependencies for the Angular application
     - name: Install Angular dependencies
       run: npm install
       working-directory: ./angular-repo
 
-    # Build the Angular application
     - name: Build Angular application
       run: npm run build
       working-directory: ./angular-repo
@@ -113,12 +101,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [start-spring-boot, build-angular]
     steps:
-    # Start the Angular application
     - name: Start Angular application
       run: npm start &
       working-directory: ./angular-repo
 
-    # Wait for the Angular application to start
     - name: Wait for Angular application to start
       run: |
         echo "Waiting for Angular to start..."
@@ -131,12 +117,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: start-angular
     steps:
-    # Install dependencies for the Cypress tests
     - name: Install Cypress dependencies
       run: npm install
       working-directory: ./cypress-repo
 
-    # Run Cypress tests
     - name: Run Cypress tests
       run: npm run cypress:run
       working-directory: ./cypress-repo
